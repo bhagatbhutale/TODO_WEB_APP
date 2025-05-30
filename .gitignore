@@ -27,3 +27,5 @@ Thumbs.db
 # Uncomment if you prefer not to commit them
 # package-lock.json
 # yarn.lock
+
+file.txt
