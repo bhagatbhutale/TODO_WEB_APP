@@ -19,3 +19,5 @@ const userSchema = mongoose.Schema({
         ref : "List"
     }]
 })
+
+module.exports = mongoose.model("User", userSchema);
