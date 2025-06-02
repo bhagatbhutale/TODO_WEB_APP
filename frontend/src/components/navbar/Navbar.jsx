@@ -3,17 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Needed for dropdowns, navbar toggle, etc.
 import "./Navbar.css"
 import { GiWhiteBook } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg ">
         <div className="container">
-          <a className="navbar-brand" href="#">
+         <Link className="navbar-brand" to="/">
             <b>
-              {" "}
               <GiWhiteBook /> TODO
             </b>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -27,51 +27,47 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+              <li className="nav-item mx-2">
+               <Link className="nav-link active" aria-current="page" to="#">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-2 ">
-                <a className="nav-link active" aria-current="page" href="#">
+               <Link className="nav-link active" aria-current="page" to="/about">
                   About Us
-                </a>
+                </Link>
+              </li>
+              <li className="nav-item mx-2 ">
+               <Link className="nav-link active" aria-current="page" to="/todo">
+                  Todo
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <a
+               <Link
                   className="nav-link active btn-nav"
                   aria-current="page"
-                  href="#"
+                  to="/signup"
                 >
                   SignUp
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <a
+               <Link
                   className="nav-link active btn-nav"
                   aria-current="page"
-                  href="#"
+                  to="/signin"
                 >
                   SignIn
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <a
+               <Link
                   className="nav-link active btn-nav"
                   aria-current="page"
-                  href="#"
+                  to="#"
                 >
                   Logout
-                </a>
-              </li>
-              <li className="nav-item mx-2">
-                <a className="nav-link active " aria-current="page" href="#">
-                  <img
-                    className="img-fluid user-png"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5BSEPxHF0-PRxJlVMHla55wvcxWdSi8RU2g&s"
-                    alt=""
-                  />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
